@@ -1,0 +1,104 @@
+{% extends 'pros/base.html' %}
+{% block new %}
+{% endblock new %}
+{% block content %}
+    <section id="showcase-inner" class="showcase-search text-white py-5">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-md-12">
+                    <form action="search.html">
+                        <!-- Form Row 1 -->
+                        <div class="form-row">
+                            <div class="offset-3 col-md-6 mb-3">
+                                <label class="sr-only">Keywords</label>
+                                <input type="text" name="keywords" class="form-control"
+                                       placeholder="Scheme Name)">
+                                <button class="btn btn-secondary btn-block mt-4" type="submit">Submit form</button>
+                            </div>
+
+
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Breadcrumb -->
+    <section id="bc" class="mt-3">
+        <div class="container">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item">
+                        <a href="{% url 'bind' %}">
+                            <i class="fas fa-home"></i> Home</a>
+                    </li>
+                    <li class="breadcrumb-item">
+                        <a href="{% url 'alschemes' %}">Schemes</a>
+                    </li>
+                    <li class="breadcrumb-item active"> Search Results</li>
+                </ol>
+            </nav>
+        </div>
+    </section>
+
+    <section id="listings" class="py-4">
+        <div class="container">
+            <div class="row">
+                {% for s in schs %}
+                    <div class="col-md-6 col-lg-4 mb-4">
+                        <div class="card listing-preview">
+                            <img class="card-img-top" src="{{ s.photo_m.url }}" alt="">
+                            {#            <div class="card-img-overlay">#}
+                            {#              <h2>#}
+                            {#                <span class="badge badge-secondary text-white">Rs {{ s.price }}</span>#}
+                            {#              </h2>#}
+                            {#            </div>#}
+                            <div class="card-body">
+                                <div class="listing-heading text-center">
+                                    <h4 class="text-primary">{{ s.name }}</h4>
+                                    <p>
+                                        <i class="fas fa-map-marker text-secondary"></i>{{ s.location }}</p>
+                                </div>
+                                <hr>
+                                <div class="row py-2 text-secondary">
+                                    <div class="col-6">
+                                        <i class="fas fa-th-large"></i> Area: {{ s.area }} Sqft
+                                    </div>
+                                    <div class="col-6">
+                                        <i class="fas fa-2x"></i> Total Flats: 36
+                                    </div>
+                                </div>
+                                <div class="row py-2 text-secondary">
+                                    <div class="col-6">
+                                        <i class="fas fa-bed"></i> Car Parking
+                                    </div>
+                                    <div class="col-6">
+                                        <i class="fas fa-bath"></i> Lifting
+                                    </div>
+                                    <div class="col-6">
+                                        <i class="fas fa-bath"></i> TubeWell
+                                    </div>
+                                    <div class="col-6">
+                                        <i class="fas fa-bath"></i> Security
+                                    </div>
+                                </div>
+                                <hr>
+                                {{ s.price }}
+                                <hr>
+                                <a href="{% url 'sigsch' s.id %}" class="btn btn-primary btn-block">More Info</a>
+                            </div>
+                        </div>
+                    </div>
+
+                {% endfor %}
+
+
+            </div>
+
+
+        </div>
+    </section>
+
+{% endblock content %}

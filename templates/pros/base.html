@@ -1,0 +1,259 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Agha Jee Builders & STATE AGENCY</title>
+    <head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="{% static 'ajbs_static/css/all.css' %}" type="text/css">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="{% static 'ajbs_static/css/bootstrap.css' %}" type="text/css">
+    <!-- Custom -->
+    <link rel="stylesheet" href="{% static 'ajbs_static/css/style.css' %}" type="text/css">
+    <!-- lightbox -->
+    <link rel="stylesheet" href="{% static 'ajbs_static/css/lightbox.min.css' %}" type="text/css">
+</head>
+<body>
+
+<!-- Top Bar -->
+{#<section id="top-bar" class="p-3">#}
+{#    <div class="container">#}
+{#        <div class="row">#}
+{#            <div class="col-md-4">#}
+{#                <i class="fas fa-phone"></i> AGHAJEE BUILDERS & REAL STATE<br>(92)333-7881717 / 081-2446578#}
+{#            </div>#}
+{#            <div class="col-md-4">#}
+{#                <i class="fas fa-envelope-open"></i>Email:<br> kakariffi@gmail.com#}
+{#            </div>#}
+{##}
+{#            <div class="col-md-4">#}
+{#                <i class="fas fa-envelope-open"></i>Address:<br> Jinnah Town Opposite Board Office#}
+{#            </div>#}
+{#            <div class="col-md-4">#}
+{#                <div class="social text-left">#}
+{#                    <a href="#">#}
+{#                        <i class="fab fa-twitter"></i>#}
+{#                    </a>#}
+{#                    <a href="#">#}
+{#                        <i class="fab fa-facebook"></i>#}
+{#                    </a>#}
+{#                    <a href="#">#}
+{#                        <i class="fab fa-linkedin"></i>#}
+{#                    </a>#}
+{#                    <a href="#">#}
+{#                        <i class="fab fa-instagram"></i>#}
+{#                    </a>#}
+{#                    <a href="#">#}
+{#                        <i class="fab fa-pinterest"></i>#}
+{#                    </a>#}
+{#                </div>#}
+{#            </div>#}
+{#        </div>#}
+{#    </div>#}
+{#</section>#}
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top">
+    <div class="container">
+        <a class="navbar-brand" href="">
+
+{#            <img src="{% static 'img/LOGO.jpg' %}" class="logo" alt="">#}
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <ul class="navbar-nav">
+                <li class="nav-item active mr-3">
+                    <a class="nav-link" href="{% url 'master_homepage' %}">Main</a>
+                </li>
+                <li class="nav-item mr-3">
+                    <a class="nav-link" href="{% url 'bind' %}">Home</a>
+                </li>
+                <li class="nav-item mr-3">
+                    <a class="nav-link" href="{% url 'alschemes' %}">Schemes</a>
+                </li>
+                <li class="nav-item mr-3">
+                    <a class="nav-link" href="">Booking</a>
+                </li>
+                <li class="nav-item mr-3">
+                    <a class="nav-link" href="">Banglows / Flats For Rent</a>
+                </li>
+                <li class="nav-item mr-3">
+                    <a class="nav-link" href="">Banglows For Sale</a>
+                </li>
+            </ul>
+
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item mr-3">
+                    <a class="nav-link" href="register.html">
+                        <i class="fas fa-user-plus"></i> Register</a>
+                </li>
+                <li class="nav-item mr-3">
+                    <a class="nav-link" href="login.html">
+                        <i class="fas fa-sign-in-alt"></i>
+
+                        Login</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+{% block new %}
+<section id="showcase-inner" class="py-5 text-white">
+    <div class="container">
+      <div class="row text-center">
+        <div class="col-md-12">
+          <h1 class="display-4">List of Schemes & Properties</h1>
+          <p class="lead">Our Completed and on Going Projects</p>
+        </div>
+      </div>
+    </div>
+  </section>
+{% endblock new %}
+
+{% block content %}{% endblock %}
+
+
+
+<script src="{% static 'ajbs_static/js/lightbox.min.js' %}"></script>
+<script src="{% static 'ajbs_static/js/main.js' %}" ></script>
+
+<section id="services" class="py-5 bg-secondary text-white">
+    <div class="container">
+      <div class="row text-center">
+        <div class="col-md-4">
+          <i class="fas fa-comment fa-4x mr-4"></i>
+          <hr>
+          <h3>Consulting Services</h3>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, debitis nam! Repudiandae, provident iste consequatur
+            hic dignissimos ratione ea quae.</p>
+        </div>
+        <div class="col-md-4">
+          <i class="fas fa-home fa-4x mr-4"></i>
+          <hr>
+          <h3>Propery Management</h3>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, debitis nam! Repudiandae, provident iste consequatur
+            hic dignissimos ratione ea quae.</p>
+        </div>
+        <div class="col-md-4">
+          <i class="fas fa-suitcase fa-4x mr-4"></i>
+          <hr>
+          <h3>Renting & Selling</h3>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, debitis nam! Repudiandae, provident iste consequatur
+            hic dignissimos ratione ea quae.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+<!-- Footer -->
+<footer class="page-footer font-small unique-color-dark">
+
+
+  <!-- Footer Links -->
+  <div class="container text-center text-md-left mt-5">
+
+    <!-- Grid row -->
+    <div class="row mt-3">
+
+      <!-- Grid column -->
+      <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+
+        <!-- Content -->
+        <h6 class="text-uppercase font-weight-bold">AGHAJEE BUILDERS & REAL STATE AGENCY</h6>
+        <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+        <p>We Promice We Build We Deliver</p>
+
+      </div>
+      <!-- Grid column -->
+
+      <!-- Grid column -->
+      <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+
+        <!-- Links -->
+        <h6 class="text-uppercase font-weight-bold">Services</h6>
+        <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+        <p>
+          <a href="#!">Accqisation Of Land</a>
+        </p>
+        <p>
+          <a href="#!">Build</a>
+        </p>
+        <p>
+          <a href="#!">Renting</a>
+        </p>
+        <p>
+          <a href="#!">Buying & Selling</a>
+        </p>
+
+      </div>
+      <!-- Grid column -->
+
+      <!-- Grid column -->
+      <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+
+        <!-- Links -->
+        <h6 class="text-uppercase font-weight-bold">Social Links</h6>
+        <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+        <p>
+          <a href="#!">Facebook</a>
+        </p>
+        <p>
+          <a href="#!">Insta Gram</a>
+        </p>
+        <p>
+          <a href="#!">WhatApp</a>
+        </p>
+        <p>
+          <a href="#!">WebSite</a>
+        </p>
+
+      </div>
+      <!-- Grid column -->
+
+      <!-- Grid column -->
+      <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+
+        <!-- Links -->
+        <h6 class="text-uppercase font-weight-bold">Contact Us</h6>
+        <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+        <p>
+          <i class="fas fa-home mr-3"></i> Quetta, Jinnah Town Opposite Balochistan Board Office, Quetta</p>
+        <p>
+          <i class="fas fa-envelope mr-3"></i> info@example.com</p>
+        <p>
+          <i class="fas fa-phone mr-3"></i> + 92 313 823 07 15</p>
+        <p>
+          <i class="fas fa-print mr-3"></i> + 92 333 788 17 17</p>
+
+      </div>
+      <!-- Grid column -->
+
+    </div>
+    <!-- Grid row -->
+
+  </div>
+
+
+
+
+  <!-- Footer Links -->
+
+  <!-- Copyright -->
+  <div class="footer-copyright text-center py-3">© 2018 Copyright:
+    <a href="https://mdbootstrap.com/education/bootstrap/"> MDBootstrap.com</a>
+  </div>
+  <!-- Copyright -->
+
+</footer>
+<!-- Footer -->
+
+</body>
+</html>
